@@ -30,8 +30,7 @@ stages{
 
    stage ('Test')
        {
-mstest
-        steps
+       steps
         {
         bat "C:/Users/mukeshjoshi/Desktop/MyDocs/NUnit.Console-3.9.0/nunit3-console.exe   C:/Program Files (x86)/Jenkins/workspace/pipeline/WebAppWithNunitTest/NunitTest/bin/Debug/NunitTest.dll"
         }
