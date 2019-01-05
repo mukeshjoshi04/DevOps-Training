@@ -51,7 +51,7 @@ withSonarQubeEnv("sonarqubewebapp")
 def SonarAnalysisStop()
 {
 echo  "\u2600 **********Sonar analysis ends*****************"
-withSonarQubeEnv("sonarqube")
+withSonarQubeEnv("sonarqubewebapp")
     {
     bat "\"${tool 'Sonarscanner'}\\SonarScanner.MSBuild.exe\" end"
     
