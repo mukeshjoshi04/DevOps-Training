@@ -3,7 +3,7 @@ pipeline
 stages{
   stage ('Checkout')
       {
-        step
+        steps
         {
         git branch: 'dev', credentialsId: '250d1e14-366e-4c0c-b43e-feb6651f0475', url: 'https://github.com/mukeshjoshi04/DevOps-Training/'
         }
@@ -11,7 +11,7 @@ stages{
 
   stage ('Restore Nuget')
       {
-        step
+        steps
         {
         	bat 'Nuget.exe restore WebAppWithNunitTest.sln'
         }
@@ -19,7 +19,7 @@ stages{
 
  stage('Build + SonarQube analysis') 
        {
-        step
+        steps
         {
     
       SonarAnalysisStart()
@@ -31,7 +31,7 @@ stages{
    stage ('Test')
        {
 mstest
-        step
+        steps
         {
         bat "C:/Users/mukeshjoshi/Desktop/MyDocs/NUnit.Console-3.9.0/nunit3-console.exe   C:/Program Files (x86)/Jenkins/workspace/pipeline/WebAppWithNunitTest/NunitTest/bin/Debug/NunitTest.dll"
         }
