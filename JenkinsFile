@@ -1,0 +1,58 @@
+pipeline
+  {
+stages{
+  stage ('Checkout')
+      {
+        step
+        {
+        git branch: 'dev', credentialsId: 'b7dd8d9a-277e-42b2-a8ae-1899ffa5501c', url: 'https://git.nagarro.com/devopscoe/training/mukeshjoshi.git'
+        }
+      }
+
+  stage ('Restore Nuget')
+      {
+        step
+        {
+        	bat 'Nuget.exe restore NUnit_Application.sln'
+        }
+      }
+
+ stage('Build + SonarQube analysis') 
+       {
+        step
+        {
+    
+      SonarAnalysisStart()
+      bat  "\"${tool 'MSBuild'}\" /t:Rebuild"
+      SonarAnalysisStop()
+        }
+       }
+
+   stage ('Test')
+       {
+        step
+        {
+     " MSTest.exe /resultsfile:Result.trx /testcontainer:C:/Program Files (x86)/Jenkins/workspace/DotNetPipeline/NUnit_Application.Test/bin/Debug/NUnit_Application.Test.dll"
+       }
+      }
+   }
+}
+
+def SonarAnalysisStart()
+{
+echo  "\u2600 **********Sonar analysis started*****************"
+withSonarQubeEnv("sonarqube")
+    {
+    bat "\"${tool 'Sonarscanner'}\\SonarScanner.MSBuild.exe\" begin /key:mukeshjoshi04 /n:MukeshJoshi /v:1.0"
+    }
+}
+
+def SonarAnalysisStop()
+{
+echo  "\u2600 **********Sonar analysis ends*****************"
+withSonarQubeEnv("sonarqube")
+    {
+    bat "\"${tool 'Sonarscanner'}\\SonarScanner.MSBuild.exe\" end"
+    
+    } 
+}
