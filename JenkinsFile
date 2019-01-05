@@ -42,9 +42,9 @@ mstest
 def SonarAnalysisStart()
 {
 echo  "\u2600 **********Sonar analysis started*****************"
-withSonarQubeEnv("sonarqube")
+withSonarQubeEnv("sonarqubewebapp")
     {
-    bat "\"${tool 'Sonarscanner'}\\SonarScanner.MSBuild.exe\" begin /key:mukeshjoshi04 /n:MukeshJoshi /v:1.0"
+    bat "\"${tool 'Sonarscanner'}\\SonarScanner.MSBuild.exe\" begin /key:mukeshiscool /n:MukeshJoshi /v:1.1.2"
     }
 }
 
