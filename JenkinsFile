@@ -5,7 +5,7 @@ stages{
       {
         step
         {
-        git branch: 'dev', credentialsId: 'b7dd8d9a-277e-42b2-a8ae-1899ffa5501c', url: 'https://git.nagarro.com/devopscoe/training/mukeshjoshi.git'
+        git branch: 'dev', credentialsId: '250d1e14-366e-4c0c-b43e-feb6651f0475', url: 'https://github.com/mukeshjoshi04/DevOps-Training/'
         }
       }
 
@@ -13,7 +13,7 @@ stages{
       {
         step
         {
-        	bat 'Nuget.exe restore NUnit_Application.sln'
+        	bat 'Nuget.exe restore WebAppWithNunitTest.sln'
         }
       }
 
@@ -30,10 +30,11 @@ stages{
 
    stage ('Test')
        {
+mstest
         step
         {
-     " MSTest.exe /resultsfile:Result.trx /testcontainer:C:/Program Files (x86)/Jenkins/workspace/DotNetPipeline/NUnit_Application.Test/bin/Debug/NUnit_Application.Test.dll"
-       }
+        bat "C:/Users/mukeshjoshi/Desktop/MyDocs/NUnit.Console-3.9.0/nunit3-console.exe   C:/Program Files (x86)/Jenkins/workspace/pipeline/WebAppWithNunitTest/NunitTest/bin/Debug/NunitTest.dll"
+        }
       }
    }
 }
