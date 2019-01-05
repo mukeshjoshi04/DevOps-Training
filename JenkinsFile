@@ -14,7 +14,7 @@ stages{
       {
         steps
         {
-        	bat 'C:/Users/mukeshjoshi/Desktop/MyDocs/nuget.exe" restore WebAppWithNunitTest.sln'
+        	bat 'C:/Users/mukeshjoshi/Desktop/MyDocs/nuget.exe restore WebAppWithNunitTest.sln'
         }
       }
 
