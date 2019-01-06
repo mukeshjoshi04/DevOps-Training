@@ -33,7 +33,7 @@ stages{
        {
        steps
         {
-        bat "C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/Common7/IDE/Extensions/TestPlatform/vstest.console.exe "NunitTest/bin/Debug/NunitTest.dll"
+        bat "C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/Common7/IDE/Extensions/TestPlatform/vstest.console.exe C:/Program Files (x86)/Jenkins/workspace/pipeline/NunitTest/bin/Debug/NunitTest.dll"
         }
       }
    }
