@@ -33,7 +33,7 @@ stages{
        {
        steps
         {
-       bat "C:/Users/mukeshjoshi/Desktop/MyDocs/NUnit.Console-3.9.0/nunit3-console.exe /NunitTest/bin/Debug/NunitTest.dll"
+       bat "C:/Users/mukeshjoshi/Desktop/MyDocs/NUnit.Console-3.9.0/nunit3-console.exe "/NunitTest/bin/Debug/NunitTest.dll"
         }
       }
    }
