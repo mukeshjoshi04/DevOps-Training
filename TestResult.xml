@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-run id="2" testcasecount="1" result="Failed" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.9.0.0" clr-version="4.0.30319.42000" start-time="2019-01-06 11:48:00Z" end-time="2019-01-06 11:48:01Z" duration="0.881576">
+  <command-line><![CDATA["C:/Users/mukeshjoshi/Desktop/MyDocs/NUnit.Console-3.9.0/nunit3-console.exe"   "C:\Program Files (x86)\Jenkins\workspace\pipeline\NunitTest\bin\Debug\NunitTest.dll"]]></command-line>
+  <test-suite type="Assembly" id="0-1003" name="NunitTest.dll" fullname="NunitTest.dll" runstate="Runnable" testcasecount="1" result="Failed" site="Child" start-time="2019-01-06 11:48:00Z" end-time="2019-01-06 11:48:00Z" duration="0.043868" total="1" passed="0" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="0">
+    <environment framework-version="3.11.0.0" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 10.0.17134.0" platform="Win32NT" cwd="C:\Users\mukeshjoshi\Desktop\WebAppWithNunitTest" machine-name="MUKESH3149524" user="mukeshjoshi" user-domain="NAGARRO" culture="en-IN" uiculture="en-US" os-architecture="x64" />
+    <settings>
+      <setting name="DisposeRunners" value="True" />
+      <setting name="WorkDirectory" value="C:\Users\mukeshjoshi\Desktop\WebAppWithNunitTest" />
+      <setting name="ImageRuntimeVersion" value="4.0.30319" />
+      <setting name="ImageTargetFrameworkName" value=".NETFramework,Version=v4.6.1" />
+      <setting name="ImageRequiresX86" value="False" />
+      <setting name="ImageRequiresDefaultAppDomainAssemblyResolver" value="False" />
+      <setting name="NumberOfTestWorkers" value="8" />
+    </settings>
+    <properties>
+      <property name="_PID" value="18656" />
+      <property name="_APPDOMAIN" value="domain-" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="TestSuite" id="0-1004" name="NunitTest" fullname="NunitTest" runstate="Runnable" testcasecount="1" result="Failed" site="Child" start-time="2019-01-06 11:48:00Z" end-time="2019-01-06 11:48:00Z" duration="0.023753" total="1" passed="0" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="0">
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestFixture" id="0-1000" name="NunitTestClass" fullname="NunitTest.NunitTestClass" classname="NunitTest.NunitTestClass" runstate="Runnable" testcasecount="1" result="Failed" site="Child" start-time="2019-01-06 11:48:00Z" end-time="2019-01-06 11:48:00Z" duration="0.020278" total="1" passed="0" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="0">
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="ParameterizedMethod" id="0-1002" name="VerifyAddition" fullname="NunitTest.NunitTestClass.VerifyAddition" classname="NunitTest.NunitTestClass" runstate="Runnable" testcasecount="1" result="Failed" site="Child" start-time="2019-01-06 11:48:00Z" end-time="2019-01-06 11:48:00Z" duration="0.014090" total="1" passed="0" failed="1" warnings="0" inconclusive="0" skipped="0" asserts="0">
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-case id="0-1001" name="VerifyAddition" fullname="NunitTest.NunitTestClass.VerifyAddition" methodname="VerifyAddition" classname="NunitTest.NunitTestClass" runstate="NotRunnable" seed="345577508" result="Failed" label="Invalid" start-time="2019-01-06 11:48:00Z" end-time="2019-01-06 11:48:00Z" duration="0.007434" asserts="0">
+            <properties>
+              <property name="_SKIPREASON" value="System.Reflection.TargetParameterCountException : Method requires 1 arguments but TestCaseAttribute only supplied 0" />
+              <property name="_PROVIDERSTACKTRACE" value="   at NUnit.Framework.TestCaseAttribute.GetParametersForTestCase(IMethodInfo method) in C:\src\nunit\nunit\src\NUnitFramework\framework\Attributes\TestCaseAttribute.cs:line 329" />
+            </properties>
+            <failure>
+              <message><![CDATA[System.Reflection.TargetParameterCountException : Method requires 1 arguments but TestCaseAttribute only supplied 0]]></message>
+              <stack-trace><![CDATA[   at NUnit.Framework.TestCaseAttribute.GetParametersForTestCase(IMethodInfo method) in C:\src\nunit\nunit\src\NUnitFramework\framework\Attributes\TestCaseAttribute.cs:line 329]]></stack-trace>
+            </failure>
+          </test-case>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

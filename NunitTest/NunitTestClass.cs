@@ -6,10 +6,10 @@ namespace NunitTest
     public class NunitTestClass
     {
         [TestCase]
-       public void VerifyAddition(int result)
+       public void VerifyAddition()
         {
-            ConnectClass CCobj = new ConnectClass();
-            Assert.AreEqual(CCobj.x+CCobj.y, CCobj.x + CCobj.y);
+            int result = ConnectClass.addition(10, 20);
+            Assert.AreEqual(30,result);
         }
     }
 }

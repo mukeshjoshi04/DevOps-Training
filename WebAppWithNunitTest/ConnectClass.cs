@@ -7,12 +7,9 @@ namespace WebAppWithNunitTest
 {
     public class ConnectClass
     {
-        public int x;
-        public int y;
-        public void  assign(int var1,int var2)
+        public static int  addition(int var1,int var2)
         {
-            this.x = var1;
-            this.y = var2;
+            return var1 + var2;
         }
     }
 }
