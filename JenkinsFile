@@ -2,13 +2,13 @@ pipeline
   {
 agent any
 stages{
-  //stage ('Checkout')
-     // {
-        //steps
-        //{
-        //git branch: 'dev', credentialsId: '250d1e14-366e-4c0c-b43e-feb6651f0475', url: 'https://github.com/mukeshjoshi04/DevOps-Training/'
-        //}
-      //}
+  stage ('Checkout')
+     {
+       steps
+       {
+        git branch: 'dev', credentialsId: '250d1e14-366e-4c0c-b43e-feb6651f0475', url: 'https://github.com/mukeshjoshi04/DevOps-Training/'
+        }
+       }
 
   stage ('Restore Nuget')
       {
