@@ -2,13 +2,13 @@ pipeline
   {
 agent any
 stages{
-  stage ('Checkout')
-      {
-        steps
-        {
-        git branch: 'dev', credentialsId: '250d1e14-366e-4c0c-b43e-feb6651f0475', url: 'https://github.com/mukeshjoshi04/DevOps-Training/'
-        }
-      }
+  //stage ('Checkout')
+     // {
+        //steps
+        //{
+        //git branch: 'dev', credentialsId: '250d1e14-366e-4c0c-b43e-feb6651f0475', url: 'https://github.com/mukeshjoshi04/DevOps-Training/'
+        //}
+      //}
 
   stage ('Restore Nuget')
       {
@@ -33,9 +33,8 @@ stages{
        {
        steps
         {
-        bat '''"C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/Common7/IDE/Extensions/TestPlatform/vstest.console.exe"
-
-"C:/Program Files (x86)/Jenkins/workspace/pipeline/NunitTest/bin/Debug/NunitTest.dll"'''
+        bat '''"C:\\Users\\mukeshjoshi\\Desktop\\MyDocs\\NUnit.Console-3.9.0\\nunit3-console.exe"
+"C:/Program Files (x86)/Jenkins/workspace/pipeline/NunitTest/bin/Debug/NunitTest.dll"'
         }
       }
    }
