@@ -1,15 +1,11 @@
 pipeline
   {
-  agent
-	  {
-	   node("windows_slave")
-	  }
+  agent{node("windows_slave")}
 stages{
     stage ('Docker')
       {
          steps
 		 {
-			echo "node_name: ${env.node_name}"
 		 bat 'docker build -t dotnetcoredemoapp:latest -f ./DemoDotNETCoreApplication/Dockerfile .'
 		 } 	
       }
