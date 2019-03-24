@@ -1,6 +1,6 @@
 pipeline
   {
-agent{ node("windows_slave")}
+agent{ label "windows_slave" }
 stages{
     stage ('Docker')
       {
