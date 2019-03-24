@@ -9,6 +9,7 @@ stages{
       {
          steps
 		 {
+			echo "node_name: ${env.node_name}"
 		 bat 'docker build -t dotnetcoredemoapp:latest -f ./DemoDotNETCoreApplication/Dockerfile .'
 		 } 	
       }
