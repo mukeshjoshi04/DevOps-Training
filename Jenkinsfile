@@ -8,7 +8,7 @@ stages{
 		 {
 		 powershell '''
 		 docker build -t dotnetcoredemoapp:latest -f ./DemoDotNETCoreApplication/Dockerfile .
-		 if($(docker ps -a | findstr My_Container)){ docker rm -f My_Container}
+		 if($(docker ps -a | findstr dotnetcoredemo_container)){ docker rm -f dotnetcoredemo_container}
 		 docker run --name dotnetcoredemo_container -d -p 9090:80 dotnetcoredemoapp
 		 '''
 		 } 	
