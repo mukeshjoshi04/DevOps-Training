@@ -7,7 +7,7 @@ stages{
          steps
 		 {
 		 bat 'docker build -t dotnetcoredemoapp:latest -f ./DemoDotNETCoreApplication/Dockerfile .'
-		 bat 'docker container inspect dotnetcoredemo_container ||docker run --name dotnetcoredemo_container -d -p 9090:80 dotnetcoredemoapp'
+		 powershell 'docker run --name dotnetcoredemo_container -d -p 9090:80 dotnetcoredemoapp'
 		 } 	
       }
   }
