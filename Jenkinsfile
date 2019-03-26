@@ -20,9 +20,9 @@ stages{
 			 withSonarQubeEnv('SonarQube')
 			 {
 			  powershell '''
-			  dotnet ${sonarscanner}/SonarScanner.MSBuild.dll begin /k:"7610e07b5434ef7c5162d480cf0f41939a617941"
+			  dotnet ${sonarscanner}//SonarScanner.MSBuild.dll begin /k:"dotnetcoreproject"
 			  dotnet build DemoDotNETCoreApplication.sln
-			  dotnet ${sonarscanner}/SonarScanner.MSBuild.dll end
+			  dotnet ${sonarscanner}//SonarScanner.MSBuild.dll end
 			  '''
 			 } 
 		 }	
