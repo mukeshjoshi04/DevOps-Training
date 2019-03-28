@@ -7,7 +7,7 @@ stages{
 	{
 		steps
 		{
-		 dotnet build DemoDotNETCoreApplication.sln
+		 dotnet build --configuration Debug
 		}
 	}
 	
