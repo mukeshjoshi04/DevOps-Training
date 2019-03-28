@@ -26,7 +26,7 @@ stages{
 			 withSonarQubeEnv('SonarQube')
 			 {
 			  powershell '''
-			  dotnet C:/Users/mukeshjoshi/Desktop/sonar-scanner-msbuild-4.6.0.1930-netcoreapp2.0/SonarScanner.MSBuild.dll begin /k:"dotnetcoreproject /d:sonar.cs.opencover.reportsPaths="DemoDotNETCoreApplication.Tests/results.xml"
+			  dotnet C:/Users/mukeshjoshi/Desktop/sonar-scanner-msbuild-4.6.0.1930-netcoreapp2.0/SonarScanner.MSBuild.dll begin /k:"dotnetcoreproject" /d:sonar.cs.opencover.reportsPaths="DemoDotNETCoreApplication.Tests/results.xml"
 			  dotnet build DemoDotNETCoreApplication.sln
 			  dotnet C:/Users/mukeshjoshi/Desktop/sonar-scanner-msbuild-4.6.0.1930-netcoreapp2.0/SonarScanner.MSBuild.dll end
 			  '''
