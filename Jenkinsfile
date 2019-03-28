@@ -15,7 +15,7 @@ stages{
 	{
 		steps
 		{
-		powershell 'C:/Users/mukeshjoshi/AppData/Local/Apps/OpenCover/OpenCover.Console.exe -target:"C:/Program Files/dotnet/dotnet.exe" -targetargs:"test DemoDotNETCoreApplication.Tests.csproj" -register:user -oldstyle'
+		powershell 'C:/Users/mukeshjoshi/AppData/Local/Apps/OpenCover/OpenCover.Console.exe -target:"C:/Program Files/dotnet/dotnet.exe" -targetargs:"test DemoDotNETCoreApplication.Tests/DemoDotNETCoreApplication.Tests.csproj" -register:user -oldstyle'
 		}
 	}
 
@@ -27,7 +27,6 @@ stages{
 			 {
 			  powershell '''
 			  dotnet C:/Users/mukeshjoshi/Desktop/sonar-scanner-msbuild-4.6.0.1930-netcoreapp2.0/SonarScanner.MSBuild.dll begin /k:"dotnetcoreproject /d:sonar.cs.opencover.reportsPaths="DemoDotNETCoreApplication.Tests/result.xml"
-			  dotnet C:/Users/mukeshjoshi/Desktop/sonar-scanner-msbuild-4.6.0.1930-netcoreapp2.0/SonarScanner.MSBuild.dll begin /k:"dotnetcoreproject"
 			  dotnet build DemoDotNETCoreApplication.sln
 			  dotnet C:/Users/mukeshjoshi/Desktop/sonar-scanner-msbuild-4.6.0.1930-netcoreapp2.0/SonarScanner.MSBuild.dll end
 			  '''
