@@ -11,11 +11,11 @@ stages{
 		}
 	}
 	
-   stage('Unit Testing and creating result.xml')
+   stage('Unit Testing and Code Coverage')
 	{
 		steps
 		{
-		bat 'C:/Users/mukeshjoshi/AppData/Local/Apps/OpenCover/OpenCover.Console.exe -target:"C:/Program Files/dotnet/dotnet.exe" -output:coverage.xml -targetargs:"C:/Users/mukeshjoshi/.nuget/packages/xunit.runner.console/2.4.1/tools/netcoreapp2.0/xunit.console.dll DemoDotNETCoreApplication.Tests/bin/Debug/netcoreapp2.2/DemoDotNETCoreApplication.Tests.dll" -register:user -oldstyle'
+		bat 'C:/Users/mukeshjoshi/AppData/Local/Apps/OpenCover/OpenCover.Console.exe -target:"C:/Program Files/dotnet/dotnet.exe" -output:coverage.xml -targetargs:"test" -register:user -oldstyle -filter:"+[DemoDotNETCoreApplication*]* -[*.Tests*]*"'
 		}
 	}
 
