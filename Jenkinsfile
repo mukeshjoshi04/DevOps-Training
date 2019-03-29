@@ -7,7 +7,8 @@ stages{
 	{
 		steps
 		{
-		 bat 'dotnet build DemoDotNETCoreApplication.sln'
+		 bat 'dotnet clean'
+		 bat 'dotnet build'
 		}
 	}
 	
@@ -15,7 +16,7 @@ stages{
 		{
 		steps
 		  {
-			bat 'C:/Users/mukeshjoshi/AppData/Local/Apps/OpenCover/OpenCover.Console.exe -target:"dotnet.exe" -output:coverage.xml -filter:"+[DemoDotNETCoreApplication*]* -[*.Tests*]*" -targetargs:"test" -register:user -oldstyle'
+			powershell 'C:/Users/mukeshjoshi/AppData/Local/Apps/OpenCover/OpenCover.Console.exe -target:"dotnet.exe" -output:coverage.xml -filter:"+[DemoDotNETCoreApplication*]* -[*.Tests*]*" -targetargs:"test" -register:user -oldstyle'
 		  }
 		}
 
