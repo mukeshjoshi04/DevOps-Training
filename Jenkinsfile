@@ -13,10 +13,10 @@ stages{
 	
    stage('Unit Testing and Code Coverage')
 	{
-		//steps
-		//{
+		steps
+		  {
 		//bat 'C:/Users/mukeshjoshi/AppData/Local/Apps/OpenCover/OpenCover.Console.exe -target:"C:/Program Files/dotnet/dotnet.exe" -output:coverage.xml -filter:"+[DemoDotNETCoreApplication*]* -[*.Tests*]*" -targetargs:"test" -register:user -oldstyle'
-		//}
+		  }
 	}
 
 	stage ('SonarQube Analysis')
