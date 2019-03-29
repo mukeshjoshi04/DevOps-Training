@@ -11,13 +11,13 @@ stages{
 		}
 	}
 	
-   //stage('Unit Testing and Code Coverage')
-	//{
-		//steps
-		  //{
-		//bat 'C:/Users/mukeshjoshi/AppData/Local/Apps/OpenCover/OpenCover.Console.exe -target:"C:/Program Files/dotnet/dotnet.exe" -output:coverage.xml -filter:"+[DemoDotNETCoreApplication*]* -[*.Tests*]*" -targetargs:"test" -register:user -oldstyle'
-		  //}
-	//}
+    stage('Unit Testing and Code Coverage')
+		{
+		steps
+		  {
+			bat 'OpenCover.Console.exe -target:"dotnet.exe" -output:coverage.xml -filter:"+[DemoDotNETCoreApplication*]* -[*.Tests*]*" -targetargs:"test" -register:user -oldstyle'
+		  }
+		}
 
 	stage ('SonarQube Analysis')
       	{
