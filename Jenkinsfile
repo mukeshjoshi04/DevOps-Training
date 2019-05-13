@@ -3,6 +3,16 @@ pipeline
   agent any
 stages{
 
+    stage('Checkout')
+	{
+		steps
+		{
+		 bat '''
+		  git log -1 >lastcommit.txt
+          git name-rev --name-only HEAD > GIT_BRANCH
+		 '''
+		}
+	}
     stage('Build Solution')
 	{
 		steps
@@ -46,6 +56,16 @@ stages{
 		 '''
 		 } 	
       	}
+		stage ('Download last successfull artifact')
+      	{
+         steps
+		 {
+		 powershell '''
+		 Invoke-WebRequest "http://jenkins.intra.lutron.com:8080/job/rockhopper/job/Vive/job/Vive_GUI/job/GUI_Build_Pipeline/job/develop/lastSuccessfulBuild/artifact/*zip*/archive.zip" -UseBasicParsing -OutFile last_successfull_artifact.zip;
+		 '''
+		 } 	
+      	}
+		
 	
       }
   }
