@@ -11,9 +11,10 @@ stages{
 		  git log -1 >lastcommit.txt
           git name-rev --name-only HEAD > GIT_BRANCH
 		 '''
+		  sleep 100s
 		}
 	}
-	sleep 100s
+	
     stage('Build Solution')
 	{
 		steps
