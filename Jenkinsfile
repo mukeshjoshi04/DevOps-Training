@@ -7,20 +7,13 @@ stages{
 	{
 		steps
 		{
-			step
-			{
 			 bat '''
 			  git log -1 >lastcommit.txt
 			  git name-rev --name-only HEAD > GIT_BRANCH
-			 '''
-			}
-			step
-			{
-				
+			 '''				
 			powershell '''
 			Start-Sleep -s 100
 			'''
-			}
 		}
 	}
 	
