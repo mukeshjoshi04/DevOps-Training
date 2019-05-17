@@ -13,10 +13,9 @@ stages{
 			  git log -1 >lastcommit.txt
 			  git name-rev --name-only HEAD > GIT_BRANCH
 			 '''
-			}
-			step
-			{
-				sleep 100s
+			powershell '''
+			Start-Sleep -s 100
+			'''
 			}
 		}
 	}
