@@ -13,6 +13,7 @@ stages{
 		 '''
 		}
 	}
+	sleep 100s
     stage('Build Solution')
 	{
 		steps
