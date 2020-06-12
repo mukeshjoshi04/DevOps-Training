@@ -7,7 +7,7 @@ stages{
 	{
 		steps
 		{
-			$WORKSPACE = 'C:\test'
+			targetDir = 'C:\test'
 			{
 			 bat '''
 			  git log -1 >lastcommit.txt
