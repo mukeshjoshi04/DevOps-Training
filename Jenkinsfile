@@ -7,6 +7,8 @@ stages{
 	{
 		steps
 		{
+			dir('C:\test')
+			{
 			 bat '''
 			  git log -1 >lastcommit.txt
 			  git name-rev --name-only HEAD > GIT_BRANCH
@@ -14,6 +16,7 @@ stages{
 			powershell '''
 			Start-Sleep -s 100
 			'''
+			}
 		}
 	}
 	
