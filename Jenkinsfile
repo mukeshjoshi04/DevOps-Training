@@ -7,7 +7,7 @@ stages{
 	{
 		steps
 		{
-			targetDir = 'C:\test'
+			env.WORKSPACE = 'C:\test'
 			{
 			 bat '''
 			  git log -1 >lastcommit.txt
