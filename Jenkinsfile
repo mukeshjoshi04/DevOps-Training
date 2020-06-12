@@ -7,7 +7,7 @@ stages{
 	{
 		steps
 		{
-			dir('C:\test')
+			ws('C:\test')
 			{
 			 bat '''
 			  git log -1 >lastcommit.txt
