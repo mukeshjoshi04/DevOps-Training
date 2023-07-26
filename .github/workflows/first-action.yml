@@ -8,6 +8,11 @@ jobs:
         run: echo "hello world"
       - name: print good bye
         run: echo "bye bye"
+      - name: print multiline comments
+        run: |
+              echo "one"
+              echo "two"
+              echo "three"
     
       
     
